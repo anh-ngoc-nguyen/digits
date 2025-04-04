@@ -1,7 +1,7 @@
 :root {
-  --nat-navbar-bg: darkblue;
-  --nat-navbar-bg-color: darkblue;
-  --nat-navbar-bg-rgb: 0, 0, 139;
+  --nat-navbar-bg: CornflowerBlue;
+  --nat-navbar-bg-color: CornflowerBlue;
+  --nat-navbar-bg-rgb: 100, 149, 237;
   --nat-navbar-text-color: white;
   --nat-home-text-color: white;
 }
@@ -15,7 +15,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background: fixed center url("/cat-bg.jpg");
+  background: fixed center url("/tuxedosam.webp");
   background-size: cover;
 }
 
@@ -26,7 +26,6 @@ body .navbar {
   --bs-navbar-brand-hover-color: var(--nat-navbar-text-color);
   --bs-navbar-active-color: var(--nat-navbar-text-color);
 }
-
 
 footer, footer a {
   color: var(--nat-navbar-text-color);
