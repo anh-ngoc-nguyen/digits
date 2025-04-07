@@ -1,14 +1,17 @@
 'use client';
 
-import { Card } from 'react-bootstrap';
+import { Card, ListGroup } from 'react-bootstrap';
 import Image from 'next/image';
 import { Contact } from '@/lib/validationSchemas';
+import type { Note } from '@prisma/client';
+import NoteItem from './NoteItem';
 
 interface ContactCardProps {
   contact: Contact;
+  notes: Note[];
 }
 
-const ContactCardAdmin = ({ contact }: ContactCardProps) => (
+const ContactCardAdmin = ({ contact, notes }: ContactCardProps) => (
   <Card className="h-100">
     <Card.Header className="d-flex align-items-center gap-3">
       <Image
@@ -28,6 +31,11 @@ const ContactCardAdmin = ({ contact }: ContactCardProps) => (
     <Card.Body>
       <Card.Text>{contact.description}</Card.Text>
       <p className="blockquote-footer">{contact.owner}</p>
+      <ListGroup variant="flush">
+        {notes.map((note) => (
+          <NoteItem key={note.id} note={note} />
+        ))}
+      </ListGroup>
     </Card.Body>
   </Card>
 );

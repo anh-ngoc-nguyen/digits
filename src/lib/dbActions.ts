@@ -6,6 +6,22 @@ import { redirect } from 'next/navigation';
 import { prisma } from './prisma';
 
 /**
+ * Adds a new note to a contact.
+ * @param note, an object with the following properties: note, contactId, owner.
+ */
+
+export async function addNote(note: { note: string; contactId: number, owner: string }) {
+  await prisma.note.create({
+    data: {
+      note: note.note,
+      contactId: note.contactId,
+      owner: note.owner,
+    },
+  });
+  redirect('/list');
+}
+
+/**
  * Adds a new stuff to the database.
  * @param stuff, an object with the following properties: name, quantity, owner, condition.
  */
