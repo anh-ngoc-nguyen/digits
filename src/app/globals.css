@@ -3,7 +3,7 @@
   --nat-navbar-bg-color: CornflowerBlue;
   --nat-navbar-bg-rgb: 100, 149, 237;
   --nat-navbar-text-color: white;
-  --nat-home-text-color: white;
+  --nat-home-text-color: black;
 }
 
 html,
@@ -15,7 +15,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background: fixed center url("/tuxedosam.webp");
+  background: fixed center url("/tuxedosam.jpg");
   background-size: cover;
 }
 

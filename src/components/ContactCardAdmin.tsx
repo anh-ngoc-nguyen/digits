@@ -11,7 +11,7 @@ interface ContactCardProps {
   notes: Note[];
 }
 
-const ContactCardAdmin = ({ contact, notes }: ContactCardProps) => (
+const ContactCardAdmin = ({ contact, notes = [] }: ContactCardProps) => (
   <Card className="h-100">
     <Card.Header className="d-flex align-items-center gap-3">
       <Image
