@@ -1,8 +1,8 @@
-title: nextjs-application-template
-description: A template for quickly starting Next.js application development
+title: digits
+description: Digits is a web app for managing contacts and logging timestamped interaction notes.
 google_analytics:
 show_downloads: true
-theme: jekyll-theme-cayman
+theme: jekyll-theme-lanyon
 
 gems:
   - jekyll-mentions
